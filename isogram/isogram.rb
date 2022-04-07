@@ -6,7 +6,7 @@
 
 module Isogram
   def self.isogram?(input)
-    new_input = input.downcase.gsub('-', '').gsub(' ', '')
+    new_input = input.downcase.gsub(/[- ]/, '')
     new_input.length == new_input.split('').uniq.length
   end
 end
